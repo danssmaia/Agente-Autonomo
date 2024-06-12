@@ -17,7 +17,10 @@ desempenho em termos de eficiência e segurança.
 
 ## Estrutura do Projeto
 
-Em andamento...
+- `agent.kv`: Código com a configuração de exibição do agente e dos 3 sensores.
+- `ai.py`: Definição da arquitetura do agente, incluindo a rede neural e as funções de treinamento.
+- `map.py`: Definição do ambiente simulado utilizando o Kivy.
+
 
 ## Configuração do Ambiente
 
@@ -34,7 +37,17 @@ Em andamento...
     git clone https://github.com/seu-usuario/entregador-autonomo.git
     cd entregador-autonomo
     ```
-``
+2. **Instalar bibliotecas**
+```
+### Install PyTorch CPU version
+conda install pytorch cpuonly -c pytorch
+
+#### Install Matplotlib
+conda install matplotlib
+
+###Install Kivy
+conda install -c conda-forge kivy
+```
 
 ## Implementação
 
@@ -42,34 +55,21 @@ Em andamento...
 
 O agente autônomo é composto por:
 
-- **Ambiente Simulado**: Utilizamos o Gym para criar um ambiente simulado que represente a cidade e os desafios de navegação.
-- **Algoritmo de Aprendizagem por Reforço**: Implementamos algoritmos como DQN (Deep Q-Network) e A2C (Advantage Actor-Critic) para treinar o agente.
-- **Rede Neural**: Utilizamos PyTorch para criar e treinar uma rede neural que auxilia na tomada de decisões do agente.
+- **Ambiente Simulado**: Uso do Kivy para criar um ambiente simulado que represente o mapa, os objetivos e os desafios de navegação.
+- **Algoritmo de Aprendizagem por Reforço**: Implementação do algoritmo DQN (Deep Q-Network) para treinar o agente.
+- **Rede Neural**: Uso PyTorch para criar e treinar uma rede neural que auxilia na tomada de decisões do agente.
 
-### Código Principal
-
-Os arquivos principais do projeto incluem:
-
-- `main.py`: Código principal para iniciar e gerenciar o treinamento do agente.
-- `ai.py`: Definição da arquitetura do agente, incluindo a rede neural e as funções de treinamento.
-- `map.py`: Definição do ambiente simulado utilizando o Gym.
 
 ## Treinamento
 
 O treinamento do agente é realizado em várias etapas:
 
 1. **Inicialização do Ambiente**: Configuração do ambiente simulado.
-2. **Treinamento do Agente**: Utilização de algoritmos de RL para treinar o agente a tomar decisões ótimas.
-3. **Monitoramento**: Avaliação contínua do desempenho do agente durante o treinamento.
-4. **Ajustes de Hiperparâmetros**: Ajustes nos parâmetros do algoritmo e da rede neural para melhorar o desempenho.
+2. **Implementação de Obstaculos**: No ambiente é possível desenhar obstaculos representados por areia, não impede a movimentação do agente, porém atrapalha ele.
+3. **Treinamento do Agente**: Utilização de algoritmos de RL para treinar o agente a tomar decisões ótimas.
+4. **Monitoramento**: Avaliação contínua do desempenho do agente durante o treinamento.
+5. **Ajustes de Hiperparâmetros**: Ajustes nos parâmetros do algoritmo e da rede neural para melhorar o desempenho, através da equação de Bellman.
 
-## Avaliação
-
-Após o treinamento, o agente é avaliado em diferentes cenários para verificar:
-
-- **Eficiência**: Capacidade de encontrar as rotas mais curtas e rápidas.
-- **Segurança**: Capacidade de evitar obstáculos e seguir regras de trânsito simuladas.
-- **Robustez**: Desempenho em diferentes condições de simulação.
 
 ## Conclusão
 
