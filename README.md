@@ -39,13 +39,13 @@ desempenho em termos de eficiência e segurança.
     ```
 2. **Instalar bibliotecas**
 ```
-### Install PyTorch CPU version
+- Install PyTorch CPU version
 conda install pytorch cpuonly -c pytorch
 
-#### Install Matplotlib
+- Install Matplotlib
 conda install matplotlib
 
-###Install Kivy
+- Install Kivy
 conda install -c conda-forge kivy
 ```
 
