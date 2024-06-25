@@ -174,7 +174,7 @@ class MyPaintWidget(Widget):
     def on_touch_down(self, touch): # adiciona areia quando clicamos com o botão esquerdo
         global length, n_points, last_x, last_y
         with self.canvas:
-            Color(0.8,0.7,0)
+            Color(1,0,0) #Cor passada Color(0.8,0.7,0)
             d = 10.
             touch.ud['line'] = Line(points = (touch.x, touch.y), width = 10)
             last_x = int(touch.x)
@@ -226,6 +226,9 @@ class AgentApp(App):
         print("saving brain...")
         brain.save()
         plt.plot(scores)
+        plt.title("Aprendizado recente")
+        plt.xlabel("Gerações")
+        plt.ylabel("recompensas")
         plt.show()
 
     def load(self, obj): # load button
