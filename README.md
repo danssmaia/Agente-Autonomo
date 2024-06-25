@@ -1,8 +1,10 @@
 # Agente Autônomo
 
 Este projeto faz parte do curso **"Aprendizagem por Reforço com Deep Learning, PyTorch e Python"** 
-e tem como objetivo desenvolver um modelo de entregador autônomo utilizando técnicas de 
+e tem como objetivo desenvolver um modelo de agente autônomo utilizando técnicas de 
 Aprendizagem por Reforço (Reinforcement Learning) e Deep Learning com a biblioteca PyTorch.
+
+![](agent.gif)
 
 ## Objetivos do Projeto
 
@@ -38,16 +40,20 @@ desempenho em termos de eficiência e segurança.
     cd entregador-autonomo
     ```
 2. **Instalar bibliotecas**
-```
-- Install PyTorch CPU version
-conda install pytorch cpuonly -c pytorch
+    ```
+    - Install PyTorch CPU version
+    conda install pytorch cpuonly -c pytorch
 
-- Install Matplotlib
-conda install matplotlib
+    - Install Matplotlib
+    conda install matplotlib
 
-- Install Kivy
-conda install -c conda-forge kivy
-```
+    - Install Kivy
+    conda install -c conda-forge kivy
+    ```
+3. **Rode o código**
+    ```
+    Compile o arquivo map.py
+    ```
 
 ## Implementação
 
